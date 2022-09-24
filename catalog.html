@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <title>Гщстиницы Седоны</title>
+  <title>Седона | Гостиницы Седоны</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -44,5 +44,96 @@
     </section>
   </header>
 
+  <main class="main-catalog">
+    <header class="main-catalog__header">
+      <h1 class="main-catalog__title">Гостиницы Седоны</h1>
+
+      <ul class="main-catalog__breadcrumbs breadcrumbs">
+        <li class="breadcrumbs__item">
+          <a class="breadcrumbs__link" href="index.html">
+            <span class="visually-hidden">Главная</span>
+            <svg class="breadcrumbs__home-icon" width="13" height="15" viewBox="0 0 13 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M6.5 0.5L0.5 6.30006V12.5001H12.5V6.30006L6.5 0.5ZM11.5 11.5001H1.5V6.70005L6.5 1.9L11.5 6.70005V11.5001Z" fill="white"/>
+              <path d="M4.5 10.5001H5.5V8.00005H7.5V10.5001H8.5V7.00005H4.5V10.5001Z" fill="white"/>
+            </svg>
+          </a>
+        </li>
+        <li class="breadcrumbs__item">
+          <a class="breadcrumbs__link">Гостиницы</a>
+        </li>
+      </ul>
+    </header>
+
+    <form class="main-catalog__filters filters" action="" method="post">
+      <fieldset class="filters__group group group--facilities">
+        <legend class="group__title">Инфраструктура:</legend>
+        <ul class="group__list">
+          <li class="group__item">
+            <label class="group__label group__label--checkbox" for="facilities-checkbox-1">Бассейн</label>
+            <input class="group__field visually-hidden" type="checkbox" name="facilities-checkbox-1"
+            id="facilities-checkbox-1" checked>
+          </li>
+          <li class="group__item">
+            <label class="group__label group__label--checkbox" for="facilities-checkbox-2">Парковка</label>
+            <input class="group__field visually-hidden" type="checkbox" name="facilities-checkbox-2"
+            id="facilities-checkbox-2" checked>
+          </li>
+          <li class="group__item">
+            <label class="group__label group__label--checkbox" for="facilities-checkbox-3">Wi-Fi</label>
+            <input class="group__field visually-hidden" type="checkbox" name="facilities-checkbox-3"
+            id="facilities-checkbox-3">
+          </li>
+        </ul>
+      </fieldset>
+      <fieldset class="filters__group group group--housing">
+        <legend class="group__title">Тип жилья:</legend>
+        <ul class="group__list">
+          <li class="group__item">
+            <label class="group__label group__label--radio" for="housing-radio-1">Гостиница</label>
+            <input class="group__field visually-hidden" type="radio" name="housing-radio" id="housing-radio-1" checked>
+          </li>
+          <li class="group__item">
+            <label class="group__label group__label--radio" for="housing-radio-2">Мотель</label>
+            <input class="group__field visually-hidden" type="radio" name="housing-radio" id="housing-radio-2">
+          </li>
+          <li class="group__item">
+            <label class="group__label group__label--radio" for="housing-radio-3">Апартаменты</label>
+            <input class="group__field visually-hidden" type="radio" name="housing-radio" id="housing-radio-3">
+          </li>
+        </ul>
+      </fieldset>
+      <fieldset class="filters__group group group--price-range">
+        <legend class="group__title">Стоимость, &#8381;:</legend>
+        <ul class="group__list">
+          <li class="group__item">
+            <label class="group__label" for="price-field-from">от</label>
+            <input class="group__field" type="number" name="price-field-from" id="price-field-from" value="0">
+          </li>
+          <li class="group__item">
+            <label class="group__label" for="price-field-to">до</label>
+            <input class="group__field" type="number" name="price-field-to" id="price-field-to" value="9000">
+          </li>
+        </ul>
+
+        <!-- <ul class="group__list">
+          <li class="group__item">
+            <input class="group__range" type="range" name="range-from" id="range-from" min="0" max="10000" value="0" step="100">
+          </li>
+          <li class="group__item">
+            <input class="group__range" type="range" name="range-to" id="range-to" min="0" max="10000" value="9000" step="100">
+          </li>
+        </ul> -->
+      </fieldset>
+
+      <ul class="filters__controls controls">
+        <li class="controls__item">
+          <button class="controls__button button" type="submit">Применить</button>
+        </li>
+        <li class="controls__item">
+          <button class="controls__button button" type="reset">Сбросить</button>
+        </li>
+      </ul>
+    </form>
+  </main>
 </body>
 </html>
