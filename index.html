@@ -25,7 +25,7 @@
         </ul>
       </nav>
 
-      <section class="header__user-panel panel">
+      <div class="header__user-panel panel">
         <ul class="panel__list">
           <li class="panel__item">
             <a class="panel__link" href="#search.html">
@@ -41,10 +41,10 @@
             <a class="panel__link button" href="#hotel-search">Хочу сюда!</a>
           </li>
         </ul>
-      </section>
+      </div>
     </header>
 
-    <main class="main">
+    <main class="main-index">
       <section class="main-index__promo">
         <h1 class="visually-hidden">Седона</h1>
         <p class="visually-hidden">Welcome to georgeous Sedona. <q>Because the Grand Canyon sucks!</q></p>
@@ -159,5 +159,67 @@
         </svg>
       </a>
     </footer>
+
+    <section class="modal">
+      <div class="modal__inner">
+        <h2 class="modal__title">Поиск гостиницы в Седоне</h2>
+        <button class="modal__close" type="button"><span class="visually-hidden">Закрыть</span></button>
+
+        <form class="modal__form" action="https://echo.htmlacademy.ru/" method="post">
+          <ul class="modal__fields">
+            <li class="modal__item">
+              <label class="modal__label" for="check-in-field">Дата Заезда:</label>
+              <input class="modal__field modal__field--date" type="text" name="check-in-field" id="check-in-field" placeholder="27 апреля 2020" required>
+              <span class="modal__message modal__message--error check-in-message">Мы не можем отправить вас в прошлое.</span>
+            </li>
+            <li class="modal__item">
+              <label class="modal__label" for="check-out-field">Дата Выезда:</label>
+              <input class="modal__field modal__field--date" type="text" name="check-out-field" id="check-out-field" placeholder="1 сентября 2023" required>
+              <span class="modal__message check-out-message">На эти даты есть свободные номера. Пока есть.</span>
+            </li>
+          </ul>
+
+          <ul class="modal__fields">
+            <li class="modal__item">
+              <label class="modal__label" for="quantity-adult-field">Взрослые:</label>
+              <input class="modal__field modal__field--quantity-adult" type="number" name="quantity-adult-field" id="quantity-adult-field" min="1" value="2" required>
+
+              <ul class="modal__buttons controls">
+                <li class="controls__item">
+                  <button class="controls__button controls__button--decrement"><span class="visually-hidden">Уменьшить количество взрослых на 1</span></button>
+                </li>
+                <li class="controls__item">
+                  <button class="controls__button controls__button--increment"><span class="visually-hidden">Увеличить количество взрослых на 1</span></button>
+                </li>
+              </ul>
+            </li>
+
+            <li class="modal__item">
+              <label class="modal__label" for="quantity-children-field">Дети:</label>
+
+              <div class="modal__info">
+                <svg class="modal__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Подсказка">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M9 4H11V6H9V4ZM11 16H9V7H11V16Z" fill="white"/>
+                </svg>
+                <p class="modal__tooltip">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</p>
+              </div>
+
+              <input class="modal__field modal__field--quantity-children" type="number" name="quantity-children-field" id="quantity-children-field" min="1" value="2" required>
+
+              <ul class="modal__controls controls">
+                <li class="controls__item">
+                  <button class="controls__button controls__button--decrement"><span class="visually-hidden">Уменьшить количество детей на 1</span></button>
+                </li>
+                <li class="controls__item">
+                  <button class="controls__button controls__button--increment"><span class="visually-hidden">Увеличить количество детей на 1</span></button>
+                </li>
+              </ul>
+            </li>
+          </ul>
+
+          <button class="modal__submit" type="submit">Найти</button>
+        </form>
+      </div>
+    </section>
   </body>
 </html>
