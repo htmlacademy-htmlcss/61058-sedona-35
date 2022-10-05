@@ -31,9 +31,10 @@ html {
 body {
   font-family: 'PT Sans';
   font-weight: 700;
+  font-size: 22px;
   color: #000000;
   margin: 0 auto;
-  min-width: 1200px;
+  width: 1200px;
 }
 
 img {
@@ -59,5 +60,86 @@ img {
 .container {
   padding: 0 70px;
   max-width: 1200px;
+  height: 100%;
   margin: 0 auto;
+}
+
+.button {
+  text-decoration: none;
+  background-color: #756157;
+  color: #ffffff;
+  font-size: 16px;
+  text-transform: uppercase;
+  padding: 8px 34px;
+  border-radius: 4px;
+}
+
+.header__logo {
+  position: absolute;
+}
+
+.navigation {
+  display: flex;
+  width: 892px;
+  margin-left: auto;
+  justify-content: space-between;
+}
+
+.navigation__list,
+.panel {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.navigation__item a {
+  padding: 20px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  line-height: 24px;
+  color: inherit;
+}
+
+.navigation__item--current a {
+  position: relative;
+}
+
+.navigation__item--current a::after {
+  content: "";
+  position: absolute;
+  left: 16px;
+  bottom: -1px;
+  height: 2px;
+  width: calc(100% - 32px);
+  background-color: #756157;
+}
+
+.panel__item {
+  padding: 22px 12px;
+}
+
+.panel__item--button {
+  padding: 14px 0;
+  margin-left: 20px;
+}
+
+.panel__item a {
+  position: relative;
+  text-decoration: none;
+}
+
+.panel__item--basket a::after {
+  content: "12";
+  position: absolute;
+  left: 8px;
+  bottom: 11px;
+  display: block;
+  padding: 5px;
+  border-radius: 50%;
+  background-color: #7DB54F;
+  color: #ffffff;
+  font-size: 10px;
+  line-height: 10px;
+  font-weight: 400;
 }
