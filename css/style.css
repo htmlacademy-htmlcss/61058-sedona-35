@@ -324,10 +324,6 @@ img {
   margin-bottom: 54px;
 }
 
-.hotel-search__link {
-
-}
-
 /* subscribe */
 .subscribe {
   padding: 96px 258px 104px;
@@ -381,4 +377,33 @@ img {
 .subscribe--background-image .subscribe__title,
 .subscribe--background-image .subscribe__text {
   color: #ffffff;
+}
+
+/* footer */
+.footer__container {
+  display: flex;
+  padding: 40px 70px 30px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.social-media {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+.social-media__item {
+  min-width: 47px;
+  text-align: center;
+}
+
+.footer__number {
+  font-size: 40px;
+  line-height: 40px;
+  font-weight: 400;
+  color: inherit;
+  text-decoration: none;
 }
