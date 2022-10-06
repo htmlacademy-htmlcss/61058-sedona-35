@@ -128,8 +128,7 @@ img {
   justify-content: flex-end;
 }
 
-.navigation__item a {
-  position: relative;
+.navigation__link {
   display: block;
   padding: 20px 16px;
   text-decoration: none;
@@ -138,7 +137,11 @@ img {
   color: inherit;
 }
 
-.navigation__item--current a::after {
+.navigation__item--current .navigation__link {
+  position: relative;
+}
+
+.navigation__item--current .navigation__link::after {
   content: "";
   position: absolute;
   left: 16px;
@@ -164,12 +167,15 @@ img {
   line-height: 20px;
 }
 
-.panel__item a {
-  position: relative;
+.panel__link {
   text-decoration: none;
 }
 
-.panel__item--basket a::after {
+.panel__item--basket .panel__link {
+  position: relative;
+}
+
+.panel__item--basket .panel__link::after {
   content: "12";
   position: absolute;
   left: 8px;
@@ -218,7 +224,7 @@ img {
 
 .advantages__item--default,
 .advantages__item--amenities,
-.advantages__container {
+.advantages__content {
   position: relative;
   width: 400px;
   min-height: 384px;
@@ -226,14 +232,14 @@ img {
   padding: 103px 85px 121px;
 }
 
-.advantages__container {
+.advantages__content {
   padding-top: 92px;
   padding-bottom: 111px;
   background-color: rgba(131, 179, 211, 1);
   color: #ffffff;
 }
 
-.advantages__container .advantages__text {
+.advantages__content .advantages__text {
   color: inherit;
 }
 
@@ -263,7 +269,7 @@ img {
 }
 
 .advantages__item--default .advantages__title::after,
-.advantages__container .advantages__title::after {
+.advantages__content .advantages__title::after {
   content: "";
   position: absolute;
   bottom: -30px;
@@ -275,7 +281,7 @@ img {
   opacity: 0.3;
 }
 
-.advantages__container .advantages__title::after {
+.advantages__content .advantages__title::after {
   background-color: #ffffff;
 }
 
@@ -288,12 +294,12 @@ img {
 
 .advantages__item--amenities::after {
   content: "";
-  width: 76px;
-  height: 76px;
+  position: absolute;
   top: 80px;
   left: 50%;
+  width: 76px;
+  height: 76px;
   transform: translateX(-50%);
-  position: absolute;
   background-repeat: no-repeat;
   background-position: top;
 }
