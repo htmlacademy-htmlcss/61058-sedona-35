@@ -194,16 +194,11 @@
 
           <!-- Взрослые -->
           <label class="modal__label modal__label--adults" for="quantity-adult-field">Взрослые:</label>
-          <div class="modal__input modal__input--adults">
-            <input class="modal__field" type="number" name="quantity-adult-field" id="quantity-adult-field" min="1" value="2" required>
-            <ul class="modal__buttons controls">
-              <li class="controls__item controls__item--decrement">
-                <button class="controls__button controls__button--decrement" type="button"><span class="controls__sign">Уменьшить количество взрослых на 1</span></button>
-              </li>
-              <li class="controls__item controls__item--increment">
-                <button class="controls__button controls__button--increment" type="button"><span class="controls__sign">Увеличить количество взрослых на 1</span></button>
-              </li>
-            </ul>
+          <div class="modal__input modal__input--adults number-input">
+            <input class="number-input__field" type="number" name="quantity-adult-field" id="quantity-adult-field" min="1" value="2" required>
+
+            <button class="number-input__button number-input__button--decrement" type="button"><span class="controls__sign">Уменьшить количество взрослых на 1</span></button>
+            <button class="number-input__button number-input__button--increment" type="button"><span class="controls__sign">Увеличить количество взрослых на 1</span></button>
           </div>
 
           <!-- Дети -->
@@ -217,16 +212,11 @@
             </div>
           </div>
 
-          <div class="modal__input modal__input--children">
-            <input class="modal__field" type="number" name="quantity-children-field" id="quantity-children-field" min="1" value="2" required>
-            <ul class="modal__controls controls">
-              <li class="controls__item controls__item--decrement">
-                <button class="controls__button" type="button"><span class="controls__sign">Уменьшить количество детей на 1</span></button>
-              </li>
-              <li class="controls__item controls__item--increment">
-                <button class="controls__button" type="button"><span class="controls__sign">Увеличить количество детей на 1</span></button>
-              </li>
-            </ul>
+          <div class="modal__input modal__input--children number-input">
+            <input class="number-input__field" type="number" name="quantity-children-field" id="quantity-children-field" min="1" value="2" required>
+
+            <button class="number-input__button number-input__button--decrement" type="button"><span class="controls__sign">Уменьшить количество детей на 1</span></button>
+            <button class="number-input__button number-input__button--increment" type="button"><span class="controls__sign">Увеличить количество детей на 1</span></button>
           </div>
 
           <!-- Найти -->

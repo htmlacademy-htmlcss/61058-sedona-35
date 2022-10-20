@@ -1082,7 +1082,8 @@ img {
   background-position: center;
 }
 
-.modal__field {
+.modal__field,
+.number-input__field {
   margin: 0;
   font-family: inherit;
   font-size: 18px;
@@ -1090,7 +1091,6 @@ img {
   font-weight: 700;
   color: #000000;
   border: none;
-  border-radius: 4px;
   background-color: #F2F2F2;
   outline: none;
 }
@@ -1100,6 +1100,7 @@ img {
   padding: 10px 20px;
   padding-right: 50px;
   border: 2px solid transparent;
+  border-radius: 4px;
 }
 
 .modal__input-wrapper .modal__field::placeholder {
@@ -1141,9 +1142,6 @@ img {
   grid-template-columns: auto auto;
   column-gap: 10px;
   align-items: center;
-}
-
-.modal__right-column .modal__label {
 }
 
 .modal__info {
@@ -1192,49 +1190,25 @@ img {
   display: block;
 }
 
-.modal__input {
-  position: relative;
-  width: 110px;
-  height: 48px;
+.number-input {
+  display: grid;
+  grid-template-columns: 40px 30px 40px;
 }
 
-.modal__input .modal__field {
-  position: absolute;
-  top: 0;
-  left: 40px;
-  width: 30px;
+.number-input__field {
   padding: 12px 10px;
-  border-radius: 0;
 }
 
-.modal__input input::-webkit-outer-spin-button,
-.modal__input input::-webkit-inner-spin-button {
+.number-input input::-webkit-outer-spin-button,
+.number-input input::-webkit-inner-spin-button {
   -webkit-appearance: none;
 }
 
-.modal__input input[type=number] {
+.number-input input[type=number] {
   -moz-appearance: textfield;
 }
 
-.controls {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-}
-
-.controls__item--decrement {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-.controls__item--increment {
-  position: absolute;
-  top: 0;
-  right: 0;
-}
-
-.controls__button {
+.number-input__button {
   position: relative;
   display: flex;
   justify-content: center;
@@ -1243,16 +1217,17 @@ img {
   height: 48px;
   margin: 0;
   padding: 0;
-  border: none;
   background-color: #f2f2f2;
+  border: none;
   outline: none;
 }
 
-.controls__item--decrement .controls__button {
+.number-input__button--decrement {
   border-radius: 4px 0 0 4px;
+  order: -1;
 }
 
-.controls__item--increment .controls__button {
+.number-input__button--increment {
   border-radius: 0 4px 4px 0;
 }
 
@@ -1264,9 +1239,9 @@ img {
   opacity: 0.3;
 }
 
-.controls__item--decrement .controls__sign::before,
-.controls__item--increment .controls__sign::before,
-.controls__item--increment .controls__sign::after {
+.number-input__button--decrement .controls__sign::before,
+.number-input__button--increment .controls__sign::before,
+.number-input__button--increment .controls__sign::after {
   content: "";
   visibility: visible;
   position: absolute;
@@ -1277,37 +1252,37 @@ img {
   background-color: #756157;
 }
 
-.controls__item--decrement .controls__sign::before,
-.controls__item--increment .controls__sign::before {
+.number-input__button--decrement .controls__sign::before,
+.number-input__button--increment .controls__sign::before {
   transform: translate(-50%, -50%);
 }
 
-.controls__item--increment .controls__sign::after {
+.number-input__button--increment .controls__sign::after {
   transform: translate(-50%, -50%) rotate(90deg);
 }
 
-.controls__button:hover .controls__sign::before,
-.controls__button:hover .controls__sign::before,
-.controls__button:hover .controls__sign::after,
-.controls__button:active .controls__sign::before,
-.controls__button:active .controls__sign::before,
-.controls__button:active .controls__sign::after,
-.controls__button:focus .controls__sign::before,
-.controls__button:focus .controls__sign::before,
-.controls__button:focus .controls__sign::after {
+.number-input__button:hover .controls__sign::before,
+.number-input__button:hover .controls__sign::before,
+.number-input__button:hover .controls__sign::after,
+.number-input__button:active .controls__sign::before,
+.number-input__button:active .controls__sign::before,
+.number-input__button:active .controls__sign::after,
+.number-input__button:focus .controls__sign::before,
+.number-input__button:focus .controls__sign::before,
+.number-input__button:focus .controls__sign::after {
   background-color: #000000;
 }
 
-.controls__button:hover .controls__sign,
-.controls__button:focus .controls__sign {
+.number-input__button:hover .controls__sign,
+.number-input__button:focus .controls__sign {
   opacity: 1;
 }
 
-.controls__button:active .controls__sign {
+.number-input__button:active .controls__sign {
   opacity: 0.2;
 }
 
-.controls__button:focus::after {
+.number-input__button:focus::after {
   content: "";
   position: absolute;
   top: 50%;
