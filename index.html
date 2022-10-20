@@ -9,7 +9,7 @@
     <header class="header">
       <div class="header__wrapper container">
         <a class="header__logo">
-          <img class="header__image" src="img/desktop/logo.png" width="140" height="70" alt="Логотип Седоны">
+          <img class="header__image" src="img/desktop/logo.svg" width="140" height="70" alt="Логотип Седоны">
         </a>
 
         <nav class="header__navigation navigation">
@@ -48,8 +48,10 @@
       <h1 class="visually-hidden">Седона</h1>
 
       <section class="main-index__promo">
-        <p class="visually-hidden">Welcome to georgeous Sedona. <q>Because the Grand Canyon sucks!</q></p>
-        <img class="main-index__promo-image" src="img/desktop/preview.jpg" width="1200" height="485" alt="Скалистый пейзаж Седоны.">
+        <div class="main-index__picture-wrapper">
+          <img class="main-index__welcome-image" src="img/desktop/welcome.svg" width="458" height="352" alt="Welcome to georgeous Sedona. 'Because the Grand Canyon sucks!'">
+        </div>
+        <!-- <img class="main-index__promo-image" src="img/desktop/preview.jpg" width="1200" height="485" alt="Скалистый пейзаж Седоны."> -->
 
         <h2 class="main-index__description-title title">Седона &mdash; небольшой городок в Аризоне, заслуживающий большего!</h2>
         <p class="main-index__text text">Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</p>
@@ -169,7 +171,7 @@
       </div>
     </footer>
 
-    <section class="modal">
+    <section class="modal" hidden>
       <div class="modal__inner">
         <h2 class="modal__title">Поиск гостиницы в Седоне</h2>
         <button class="modal__close" type="button"><span class="visually-hidden">Закрыть</span></button>
@@ -178,12 +180,16 @@
           <ul class="modal__fields">
             <li class="modal__item modal__item--date">
               <label class="modal__label" for="check-in-field">Дата Заезда:</label>
-              <input class="modal__field" type="text" name="check-in-field" id="check-in-field" value="27 апреля 2020" required>
+              <div class="modal__input-wrapper">
+                <input class="modal__field" type="text" name="check-in-field" id="check-in-field" value="27 апреля 2020" placeholder="Укажите дату" required>
+              </div>
               <span class="modal__message modal__message--error check-in-message">Мы не можем отправить вас в прошлое.</span>
             </li>
             <li class="modal__item modal__item--date">
               <label class="modal__label" for="check-out-field">Дата Выезда:</label>
-              <input class="modal__field" type="text" name="check-out-field" id="check-out-field" value="1 сентября 2023" required>
+              <div class="modal__input-wrapper">
+                <input class="modal__field" type="text" name="check-out-field" id="check-out-field" value="1 сентября 2023" placeholder="Укажите дату" required>
+              </div>
               <span class="modal__message check-out-message">На эти даты есть свободные номера. Пока есть.</span>
             </li>
             <li class="modal__item modal__item--quantity">
@@ -219,10 +225,10 @@
 
                 <ul class="modal__controls controls">
                   <li class="controls__item controls__item--decrement">
-                    <button class="controls__button controls__button--decrement" type="button"><span class="controls__sign">Уменьшить количество детей на 1</span></button>
+                    <button class="controls__button" type="button"><span class="controls__sign">Уменьшить количество детей на 1</span></button>
                   </li>
                   <li class="controls__item controls__item--increment">
-                    <button class="controls__button controls__button--increment" type="button"><span class="controls__sign">Увеличить количество детей на 1</span></button>
+                    <button class="controls__button" type="button"><span class="controls__sign">Увеличить количество детей на 1</span></button>
                   </li>
                 </ul>
               </div>
