@@ -20,6 +20,7 @@
 
 html {
   box-sizing: border-box;
+  background-color: #f2f2f2;
 }
 
 *,
@@ -36,6 +37,7 @@ body {
   color: #000000;
   margin: 0 auto;
   width: 1200px;
+  background-color: #ffffff;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
@@ -694,6 +696,7 @@ img {
 }
 
 .group__title {
+  padding: 0;
   font-size: 20px;
   line-height: 24px;
   margin-bottom: 32px;
@@ -1475,7 +1478,7 @@ img {
   position: absolute;
   top: 40px;
   left: 50%;
-  transform: translateX(-52%);
+  transform: translateX(-50%);
   width: 256px;
   margin: 0;
   padding: 15px 22px 18px;
