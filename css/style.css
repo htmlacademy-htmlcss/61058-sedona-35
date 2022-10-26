@@ -278,6 +278,7 @@ img {
 }
 
 .navigation__link {
+  position: relative;
   display: block;
   padding: 20px 16px;
   text-decoration: none;
@@ -286,19 +287,28 @@ img {
   color: inherit;
 }
 
-.navigation__item--current .navigation__link {
-  position: relative;
-}
-
-.navigation__item--current .navigation__link::after {
+.navigation__link::after,
+.panel__link:not(.button)::after {
   content: "";
   position: absolute;
   z-index: 100;
-  left: 16px;
-  right: 16px;
   bottom: -1px;
+  display: none;
   height: 2px;
   background-color: #756157;
+}
+
+.navigation__item--current .navigation__link::after,
+.navigation__link:hover::after {
+  display: block;
+  left: 16px;
+  right: 16px;
+}
+
+.panel__link:not(.button):hover::after {
+  display: block;
+  left: 0;
+  right: 0;
 }
 
 /* user panel */
@@ -321,11 +331,11 @@ img {
   text-decoration: none;
 }
 
-.panel__item--basket .panel__link{
+.panel__link:not(.button) {
   position: relative;
 }
 
-.panel__item--basket .panel__link::after {
+.panel__item--basket .panel__link::before {
   content: "12";
   position: absolute;
   top: 11px;
