@@ -117,7 +117,7 @@
         <p class="subscribe__text text">Только полезная информация и никакого спама, честное&nbsp;бойскаутское!</p>
 
         <form class="subscribe__form" method="post" action="https://echo.htmlacademy.ru/">
-          <input class="subscribe__field" type="email" name="email-field" id="email-field" placeholder="Ваш e-mail" required>
+          <input class="subscribe__field field" type="email" name="email-field" id="email-field" placeholder="Ваш e-mail" required>
           <button class="subscribe__button button button--submit" type="submit">Подписаться</button>
         </form>
       </section>
@@ -168,7 +168,7 @@
       </a>
     </footer>
 
-    <section class="modal">
+    <section class="modal" hidden>
       <div class="modal__inner">
         <h2 class="modal__title">Поиск гостиницы в Седоне</h2>
         <button class="modal__close" type="button"><span class="modal__close-sign">Закрыть</span></button>
@@ -177,13 +177,13 @@
             <!-- Выбор даты -->
           <div class="modal__group modal__group--date">
             <label class="modal__label" for="check-in-field">Дата Заезда:</label>
-            <input class="modal__field" type="text" name="check-in-field" id="check-in-field" value="27 апреля 2020" required>
+            <input class="modal__field field" type="text" name="check-in-field" id="check-in-field" placeholder="Укажите дату" value="27 апреля 2020" required>
             <button class="modal__date-picker" type="button"><span class="visually-hidden">Выбрать дату заезда</span></button>
             <span class="modal__message modal__message--error check-in-message">Мы не можем отправить вас в прошлое.</span>
           </div>
           <div class="modal__group modal__group--date">
             <label class="modal__label" for="check-out-field">Дата Выезда:</label>
-            <input class="modal__field" type="text" name="check-out-field" id="check-out-field" value="1 сентября 2023" required>
+            <input class="modal__field field" type="text" name="check-out-field" id="check-out-field" placeholder="Укажите дату" value="1 сентября 2023" required>
             <button class="modal__date-picker" type="button"><span class="visually-hidden">Выбрать дату выезда</span></button>
             <span class="modal__message check-out-message">На эти даты есть свободные номера. Пока есть.</span>
           </div>
@@ -192,7 +192,7 @@
           <div class="modal__group modal__group--quantity">
             <label class="modal__label modal__label--adults" for="quantity-adult-field">Взрослые:</label>
             <div class="modal__input modal__input--adults number-input">
-              <input class="number-input__field" type="number" name="quantity-adult-field" id="quantity-adult-field" min="1" value="2" required>
+              <input class="number-input__field field" type="number" name="quantity-adult-field" id="quantity-adult-field" min="1" value="2" required>
               <button class="number-input__button number-input__button--decrement" type="button"><span class="number-input__sign">Уменьшить количество взрослых на 1</span></button>
               <button class="number-input__button number-input__button--increment" type="button"><span class="number-input__sign">Увеличить количество взрослых на 1</span></button>
             </div>
@@ -211,7 +211,7 @@
             </div>
 
             <div class="modal__input modal__input--children number-input">
-              <input class="number-input__field" type="number" name="quantity-children-field" id="quantity-children-field" min="1" value="2" required>
+              <input class="number-input__field field" type="number" name="quantity-children-field" id="quantity-children-field" min="1" value="2" required>
               <button class="number-input__button number-input__button--decrement" type="button"><span class="number-input__sign">Уменьшить количество детей на 1</span></button>
               <button class="number-input__button number-input__button--increment" type="button"><span class="number-input__sign">Увеличить количество детей на 1</span></button>
             </div>
