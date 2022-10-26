@@ -1220,6 +1220,12 @@ img {
   list-style-type: none;
 }
 
+.stars__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .stars__item:not(:last-child) {
   margin-right: 6px;
 }
