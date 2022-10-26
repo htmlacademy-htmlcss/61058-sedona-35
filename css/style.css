@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: > 0.5% and last 5 version and not dead
+*/
+
 /* PT Sans regular (normal) */
 @font-face {
   font-family: "PT Sans";
@@ -45,7 +52,8 @@ img {
   display: block;
   max-width: 100%;
   height: auto;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .visually-hidden {
@@ -56,7 +64,8 @@ img {
   border: 0;
   padding: 0;
   white-space: nowrap;
-  clip-path: inset(100%);
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
@@ -889,13 +898,13 @@ img {
   border-bottom-left-radius: 0;
 }
 
-/* hide input[type=number] arrows*/
-.group--price-range input::-webkit-outer-spin-button,
-.group--price-range input::-webkit-inner-spin-button {
+.group--price-range .group__field::-webkit-outer-spin-button,
+.group--price-range .group__field::-webkit-inner-spin-button {
   -webkit-appearance: none;
+  appearance: none;
 }
 
-.group--price-range input[type=number] {
+.group--price-range .group__field {
   -moz-appearance: textfield;
 }
 
@@ -909,7 +918,6 @@ img {
   color: #000000;
   opacity: 0.3;
 }
-
 
 /* slider */
 .slider {
@@ -1049,7 +1057,6 @@ img {
   background-color: transparent;
   cursor: pointer;
   -webkit-appearance: none;
-  -moz-appearance: none;
   appearance: none;
 }
 
@@ -1599,12 +1606,13 @@ img {
   border-radius: 4px;
 }
 
-.number-input input::-webkit-outer-spin-button,
-.number-input input::-webkit-inner-spin-button {
+.number-input__field::-webkit-outer-spin-button,
+.number-input__field::-webkit-inner-spin-button{
   -webkit-appearance: none;
+  appearance: none;
 }
 
-.number-input input[type=number] {
+.number-input__field {
   -moz-appearance: textfield;
 }
 
