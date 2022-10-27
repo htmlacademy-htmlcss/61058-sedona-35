@@ -1366,7 +1366,7 @@ img {
   position: absolute;
   top: 0;
   left: 0;
-  display: none;
+  /* display: none; */
   width: 100%;
   height: 100%;
   background-color: rgba(242, 242, 242, 0.8);
@@ -1461,6 +1461,11 @@ img {
   grid-auto-rows: minmax(40px, min-content);
   gap: 4px 7px;
   align-items: center;
+}
+
+.modal__label {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
 }
 
 .modal__group--date .modal__label {
@@ -1579,14 +1584,13 @@ img {
 .modal__right-column {
   display: flex;
   align-items: center;
-  max-width: 100%;
-  margin-right: 40px;
-  justify-self: end;
+  justify-self: start;
 }
 
 .modal__right-column .modal__label {
+  margin-left: 6px;
   margin-right: 10px;
-  word-wrap: break-word;
+  max-width: 85px;
 }
 
 .modal__info {
