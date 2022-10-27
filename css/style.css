@@ -31,15 +31,21 @@ html {
 
 body {
   position: relative;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
   font-family: 'PT Sans', sans-serif;
   font-weight: 700;
   font-size: 22px;
   color: #000000;
   margin: 0 auto;
+  width: 100%;
+  background-color: #f2f2f2;
+}
+
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
   width: 1200px;
+  min-height: 100vh;
   background-color: #ffffff;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
@@ -1463,6 +1469,11 @@ img {
   align-items: center;
 }
 
+.modal__label {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
 .modal__group--date .modal__label {
   grid-column: 1;
 }
@@ -1579,14 +1590,13 @@ img {
 .modal__right-column {
   display: flex;
   align-items: center;
-  max-width: 100%;
-  margin-right: 40px;
-  justify-self: end;
+  justify-self: start;
 }
 
 .modal__right-column .modal__label {
+  margin-left: 6px;
   margin-right: 10px;
-  word-wrap: break-word;
+  max-width: 85px;
 }
 
 .modal__info {
