@@ -44,19 +44,16 @@ body {
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
-main {
+.main-index,
+.main-catalog {
   flex-grow: 1;
 }
 
 img {
-  display: block;
   max-width: 100%;
   height: auto;
   -o-object-fit: cover;
      object-fit: cover;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
 }
 
 .visually-hidden {
@@ -390,6 +387,7 @@ img {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  text-align: center;
 }
 
 .main-index__picture-wrapper::after {
@@ -403,10 +401,6 @@ img {
   background-repeat: no-repeat;
   background-position: bottom;
   background-size: contain;
-}
-
-.main-index__welcome-image {
-  margin: 0 auto;
 }
 
 .main-index__description-title {
