@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <title>Седона | Гостиницы Седоны</title>
-  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/icons/favicon.png">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -84,7 +84,7 @@
           </ul>
         </fieldset>
         <fieldset class="filters__group group group--housing">
-          <legend class="group__title">Тип жилья:</legend>
+          <legend class="group__title">Тип Жилья:</legend>
           <ul class="group__list">
             <li class="group__item">
               <input class="group__field visually-hidden" type="radio" name="housing-field" id="housing-field-hotel" checked>
@@ -104,31 +104,31 @@
           <legend class="group__title">Стоимость, &#8381;:</legend>
           <ul class="group__list">
             <li class="group__item">
-              <input class="group__field group__field--price-from" type="number" name="price-field-from" id="price-field-from" value="0"> <!-- min="0" max="10000" -->
+              <input class="group__field group__field--price-from field" type="number" name="price-field-from" id="price-field-from" value="0">
               <label class="group__label" for="price-field-from">от</label>
             </li>
             <li class="group__item">
-              <input class="group__field group__field--price-to" type="number" name="price-field-to" id="price-field-to" value="9000"> <!-- min="0" max="10000" -->
+              <input class="group__field group__field--price-to field" type="number" name="price-field-to" id="price-field-to" value="9000">
               <label class="group__label" for="price-field-to">до</label>
             </li>
           </ul>
 
           <div class="group__slider slider">
             <div class="slider__scale">
-              <div class="slider__range"></div>
-
-              <ul class="slider__list">
-                <li class="slider__item slider__item--from">
-                  <button class="slider__button" type="button">
-                    <span class="visually-hidden">Минимальная цена</span>
-                  </button>
-                </li>
-                <li class="slider__item slider__item--to">
-                  <button class="slider__button" type="button">
-                    <span class="visually-hidden">Максимальная цена</span>
-                  </button>
-                </li>
-              </ul>
+              <div class="slider__range">
+                <ul class="slider__list">
+                  <li class="slider__item slider__item--from">
+                    <button class="slider__button" type="button">
+                      <span class="visually-hidden">Минимальная цена</span>
+                    </button>
+                  </li>
+                  <li class="slider__item slider__item--to">
+                    <button class="slider__button" type="button">
+                      <span class="visually-hidden">Максимальная цена</span>
+                    </button>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </fieldset>
@@ -200,11 +200,6 @@
                       <g clip-path="url(#a)">
                         <path d="m9 0 2.1 6.5H18l-5.6 4 2.2 6.5L9 13l-5.6 4 2.2-6.5-5.6-4h6.9L9 0Z" fill="#83B3D3"/>
                       </g>
-                      <defs>
-                        <clipPath id="a">
-                          <path fill="#fff" d="M0 0h18v17H0z"/>
-                        </clipPath>
-                      </defs>
                     </svg>
                   </li>
                   <li class="stars__item">
@@ -212,11 +207,6 @@
                       <g clip-path="url(#a)">
                         <path d="m9 0 2.1 6.5H18l-5.6 4 2.2 6.5L9 13l-5.6 4 2.2-6.5-5.6-4h6.9L9 0Z" fill="#83B3D3"/>
                       </g>
-                      <defs>
-                        <clipPath id="a">
-                          <path fill="#fff" d="M0 0h18v17H0z"/>
-                        </clipPath>
-                      </defs>
                     </svg>
                   </li>
                   <li class="stars__item">
@@ -224,11 +214,6 @@
                       <g clip-path="url(#a)">
                         <path d="m9 0 2.1 6.5H18l-5.6 4 2.2 6.5L9 13l-5.6 4 2.2-6.5-5.6-4h6.9L9 0Z" fill="#83B3D3"/>
                       </g>
-                      <defs>
-                        <clipPath id="a">
-                          <path fill="#fff" d="M0 0h18v17H0z"/>
-                        </clipPath>
-                      </defs>
                     </svg>
                   </li>
                   <li class="stars__item">
@@ -236,11 +221,6 @@
                       <g clip-path="url(#a)">
                         <path d="m9 0 2.1 6.5H18l-5.6 4 2.2 6.5L9 13l-5.6 4 2.2-6.5-5.6-4h6.9L9 0Z" fill="#83B3D3"/>
                       </g>
-                      <defs>
-                        <clipPath id="a">
-                          <path fill="#fff" d="M0 0h18v17H0z"/>
-                        </clipPath>
-                      </defs>
                     </svg>
                   </li>
                 </ul>
@@ -257,7 +237,6 @@
               <span class="cards__price">От 5000 &#8381;</span>
             </div>
 
-
             <div class="cards__group">
               <a class="cards__button button" href="#">Подробнее</a>
               <button class="cards__button button button--favorite" type="button">В избранном</button>
@@ -265,51 +244,31 @@
               <ul class="cards__stars stars" aria-label="Отель 4 звезды">
                 <li class="stars__item">
                   <svg width="18" height="17" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Звезда">
-                      <g clip-path="url(#a)">
-                        <path d="m9 0 2.1 6.5H18l-5.6 4 2.2 6.5L9 13l-5.6 4 2.2-6.5-5.6-4h6.9L9 0Z" fill="#83B3D3"/>
-                      </g>
-                      <defs>
-                        <clipPath id="a">
-                          <path fill="#fff" d="M0 0h18v17H0z"/>
-                        </clipPath>
-                      </defs>
-                    </svg>
+                    <g clip-path="url(#a)">
+                      <path d="m9 0 2.1 6.5H18l-5.6 4 2.2 6.5L9 13l-5.6 4 2.2-6.5-5.6-4h6.9L9 0Z" fill="#83B3D3"/>
+                    </g>
+                  </svg>
                 </li>
                 <li class="stars__item">
                   <svg width="18" height="17" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Звезда">
-                      <g clip-path="url(#a)">
-                        <path d="m9 0 2.1 6.5H18l-5.6 4 2.2 6.5L9 13l-5.6 4 2.2-6.5-5.6-4h6.9L9 0Z" fill="#83B3D3"/>
-                      </g>
-                      <defs>
-                        <clipPath id="a">
-                          <path fill="#fff" d="M0 0h18v17H0z"/>
-                        </clipPath>
-                      </defs>
-                    </svg>
+                    <g clip-path="url(#a)">
+                      <path d="m9 0 2.1 6.5H18l-5.6 4 2.2 6.5L9 13l-5.6 4 2.2-6.5-5.6-4h6.9L9 0Z" fill="#83B3D3"/>
+                    </g>
+                  </svg>
                 </li>
                 <li class="stars__item">
                   <svg width="18" height="17" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Звезда">
-                      <g clip-path="url(#a)">
-                        <path d="m9 0 2.1 6.5H18l-5.6 4 2.2 6.5L9 13l-5.6 4 2.2-6.5-5.6-4h6.9L9 0Z" fill="#83B3D3"/>
-                      </g>
-                      <defs>
-                        <clipPath id="a">
-                          <path fill="#fff" d="M0 0h18v17H0z"/>
-                        </clipPath>
-                      </defs>
-                    </svg>
+                    <g clip-path="url(#a)">
+                      <path d="m9 0 2.1 6.5H18l-5.6 4 2.2 6.5L9 13l-5.6 4 2.2-6.5-5.6-4h6.9L9 0Z" fill="#83B3D3"/>
+                    </g>
+                  </svg>
                 </li>
                 <li class="stars__item">
                   <svg width="18" height="17" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Звезда">
-                      <g clip-path="url(#a)">
-                        <path d="m9 0 2.1 6.5H18l-5.6 4 2.2 6.5L9 13l-5.6 4 2.2-6.5-5.6-4h6.9L9 0Z" fill="#83B3D3"/>
-                      </g>
-                      <defs>
-                        <clipPath id="a">
-                          <path fill="#fff" d="M0 0h18v17H0z"/>
-                        </clipPath>
-                      </defs>
-                    </svg>
+                    <g clip-path="url(#a)">
+                      <path d="m9 0 2.1 6.5H18l-5.6 4 2.2 6.5L9 13l-5.6 4 2.2-6.5-5.6-4h6.9L9 0Z" fill="#83B3D3"/>
+                    </g>
+                  </svg>
                 </li>
               </ul>
 
@@ -325,7 +284,6 @@
               <span class="cards__price">От 2500 &#8381;</span>
             </div>
 
-
               <div class="cards__group">
                   <a class="cards__button button" href="#">Подробнее</a>
                   <button class="cards__button button button--to-favorite" type="button">В избранное</button>
@@ -336,11 +294,6 @@
                       <g clip-path="url(#a)">
                         <path d="m9 0 2.1 6.5H18l-5.6 4 2.2 6.5L9 13l-5.6 4 2.2-6.5-5.6-4h6.9L9 0Z" fill="#83B3D3"/>
                       </g>
-                      <defs>
-                        <clipPath id="a">
-                          <path fill="#fff" d="M0 0h18v17H0z"/>
-                        </clipPath>
-                      </defs>
                     </svg>
                   </li>
                   <li class="stars__item">
@@ -348,24 +301,14 @@
                       <g clip-path="url(#a)">
                         <path d="m9 0 2.1 6.5H18l-5.6 4 2.2 6.5L9 13l-5.6 4 2.2-6.5-5.6-4h6.9L9 0Z" fill="#83B3D3"/>
                       </g>
-                      <defs>
-                        <clipPath id="a">
-                          <path fill="#fff" d="M0 0h18v17H0z"/>
-                        </clipPath>
-                      </defs>
                     </svg>
                   </li>
                   <li class="stars__item">
                     <svg width="18" height="17" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Звезда">
-                      <g clip-path="url(#a)">
-                        <path d="m9 0 2.1 6.5H18l-5.6 4 2.2 6.5L9 13l-5.6 4 2.2-6.5-5.6-4h6.9L9 0Z" fill="#83B3D3"/>
-                      </g>
-                      <defs>
-                        <clipPath id="a">
-                          <path fill="#fff" d="M0 0h18v17H0z"/>
-                        </clipPath>
-                      </defs>
-                    </svg>
+                    <g clip-path="url(#a)">
+                      <path d="m9 0 2.1 6.5H18l-5.6 4 2.2 6.5L9 13l-5.6 4 2.2-6.5-5.6-4h6.9L9 0Z" fill="#83B3D3"/>
+                    </g>
+                  </svg>
                   </li>
                 </ul>
 
@@ -389,27 +332,17 @@
               <ul class="cards__stars stars" aria-label="Отель 2 звезды">
                 <li class="stars__item">
                   <svg width="18" height="17" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Звезда">
-                      <g clip-path="url(#a)">
-                        <path d="m9 0 2.1 6.5H18l-5.6 4 2.2 6.5L9 13l-5.6 4 2.2-6.5-5.6-4h6.9L9 0Z" fill="#83B3D3"/>
-                      </g>
-                      <defs>
-                        <clipPath id="a">
-                          <path fill="#fff" d="M0 0h18v17H0z"/>
-                        </clipPath>
-                      </defs>
-                    </svg>
+                    <g clip-path="url(#a)">
+                      <path d="m9 0 2.1 6.5H18l-5.6 4 2.2 6.5L9 13l-5.6 4 2.2-6.5-5.6-4h6.9L9 0Z" fill="#83B3D3"/>
+                    </g>
+                  </svg>
                 </li>
                 <li class="stars__item">
                   <svg width="18" height="17" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Звезда">
-                      <g clip-path="url(#a)">
-                        <path d="m9 0 2.1 6.5H18l-5.6 4 2.2 6.5L9 13l-5.6 4 2.2-6.5-5.6-4h6.9L9 0Z" fill="#83B3D3"/>
-                      </g>
-                      <defs>
-                        <clipPath id="a">
-                          <path fill="#fff" d="M0 0h18v17H0z"/>
-                        </clipPath>
-                      </defs>
-                    </svg>
+                    <g clip-path="url(#a)">
+                      <path d="m9 0 2.1 6.5H18l-5.6 4 2.2 6.5L9 13l-5.6 4 2.2-6.5-5.6-4h6.9L9 0Z" fill="#83B3D3"/>
+                    </g>
+                  </svg>
                 </li>
               </ul>
 
@@ -431,10 +364,10 @@
 
     <section class="main-catalog__subscribe subscribe">
       <h2 class="subscribe__title title">Подпишитесь на рассылку</h2>
-      <p class="subscribe__text text">Только полезная информация и никакого спама, честное бойскаутское!</p>
+      <p class="subscribe__text text">Только полезная информация и никакого спама, честное&nbsp;бойскаутское!</p>
 
       <form class="subscribe__form" method="post" action="https://echo.htmlacademy.ru/">
-        <input class="subscribe__field" type="email" name="email-field" id="email-field" placeholder="Ваш e-mail" required>
+        <input class="subscribe__field field" type="email" name="email-field" id="email-field" placeholder="Ваш e-mail" required>
         <button class="subscribe__button button button--submit" type="submit">Подписаться</button>
       </form>
     </section>
